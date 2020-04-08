@@ -23,6 +23,8 @@ dependencies {
     testImplementation("org.jetbrains.test:remote-fixtures:$fixturesVersion")
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+
+    testCompile "org.testcontainers:testcontainers:1.13.0"
 }
 
 downloadRobotServerPlugin.version = remoteRobotVersion

@@ -32,7 +32,8 @@ class IdeaFrame(remoteRobot: RemoteRobot, remoteComponent: RemoteComponent) : Co
     fun dumbAware(timeout: Duration = Duration.ofMinutes(5), function: () -> Unit) {
         step("Wait for smart mode") {
             waitFor(duration = timeout, interval = Duration.ofSeconds(5)) {
-                runCatching { isDumbMode().not() }.getOrDefault(false)
+//                runCatching { isDumbMode().not() }.getOrDefault(false)
+                true
             }
             function()
             step("..wait for smart mode again") {
